@@ -24,12 +24,21 @@ Output: a a_1 a_2 b c a_3 a_4 d c_1 d_1 d_2
 input_string = "a a a b c a a d c d d"
 words = input_string.split()
 counts = {}
-result = []
+# result = []
+# for word in words:
+#     if word in counts:
+#         counts[word] += 1
+#         result.append(f"{word}_{counts[word]}")
+#     else:
+#         counts[word] = 0
+#         result.append(word)
+# print(" ".join(result))
+
 for word in words:
-    if word in counts:
-        counts[word] += 1
-        result.append(f"{word}_{counts[word]}")
+    if word not in counts:
+        print(word, end=' ')
     else:
-        counts[word] = 0
-        result.append(word)
-print(" ".join(result))
+        print(f"{word}_{counts[word]}", end=' ')
+    counts[word] = counts.get(word, 0) + 1
+
+#Это мой текст, 
