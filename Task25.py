@@ -41,4 +41,4 @@ for word in words:
         print(f"{word}_{counts[word]}", end=' ')
     counts[word] = counts.get(word, 0) + 1
 
-#Это мой текст, 
+#Это мой текст,
